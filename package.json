@@ -1,6 +1,6 @@
 {
 
-   "name": "locus_builder",
+   "name": "locusbuilder",
 
    "preferGlobal": true,
 
@@ -12,15 +12,19 @@
 
    "license": "MIT",
 
+
    "engines": {
-
-       "node": ">=0.10"
-
-   },
+    "node": "8.4.0"
+    },
 
    "scripts": {
 
-       "start": "node ./app.js"
+   "start": "node index.js",
+   "test": "mocha",
+    "postinstall": "builder install && grunt build"
+
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "echo This runs afterwards."
 
    },
 
